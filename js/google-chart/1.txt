@@ -1,0 +1,69 @@
+
+<script type=\"text/javascript\">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Академическая', '<?php $this->akademcash ?>'],
+            ['Бескудниково', '<?php $this->beskutcash ?>'],
+            ['Бибирево', '<?php $this->bibirevocash ?>'],
+            ['Бутово', '<?php $this->butovocash ?>'],
+            ['Водный Стадион', '<?php $this->vodnikcash ?>'],
+            ['Динамо', '<?php $this->dinamocash ?>'],
+            ['Домодедовская', '<?php $this->domodedovocash ?>'],
+            ['Дубровка', '<?php $this->dubrovkacash ?>'],
+            ['Измайлово', '<?php $this->izmailovocash ?>'],
+            ['Кантемировская', '<?php $this->kantimcash ?>'],
+            ['Коломенская', '<?php $this->kolomencash ?>'],
+            ['Люберцы', '<?php $this->lubercash ?>'],
+            ['Марьино', '<?php $this->marinocash ?>'],
+            ['Митино', '<?php $this->mitinocash ?>'],
+            ['Ордженикидзе', '<?php $this->ordjencash ?>'],
+            ['Перово', '<?php $this->perovocash ?>'],
+            ['Пионерская', '<?php $this->pionerkacash ?>'],
+            ['Свиблово', '<?php $this->sviblovocash ?>'],
+            ['Строгино', '<?php $this->stroginocash ?>'],
+            ['Чертаново', '<?php $this->chertanovocash ?>'],
+            ['Ясенево', '<?php $this->yasenevocash ?>']
+          ]);
+
+          var options = {
+            title: 'Выручка за сегодня',
+              pieHole: 0.4,
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+        }
+    </script>
+
+
+
+    protected function GetTottalUsersArray(){
+        $data = array();
+        $data['1'] = $this->beskudtuser;
+        $data['2'] = $this->mitinouser;
+        $data['3'] = $this->kolomenuser;
+        $data['6'] = $this->sviblovouser;
+        $data['7'] = $this->stroginouser;
+        $data['8'] = $this->kantimuser;
+        $data['9'] = $this->domodedovouser;
+        $data['10'] = $this->dubrovkauser;
+        $data['11'] = $this->pionerkauser;
+        $data['12'] = $this->luberuser;
+        $data['13'] = $this->bibirevouser;
+        $data['14'] = $this->marinouser;
+        $data['15'] = $this->perovouser;
+        $data['16'] = $this->chertanovouser;
+        $data['17'] = $this->butovouser;
+        $data['18'] = $this->akademuser;
+        $data['19'] = $this->ordjenuser;
+        $data['20'] = $this->dinamouser;
+        $data['21'] = $this->izmailovouser;
+        $data['22'] = $this->yasenevouser;
+        $data['24'] = $this->vodnikuse;
+    }
