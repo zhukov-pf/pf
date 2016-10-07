@@ -9,11 +9,11 @@
 *
 */
 
-class SelectUsers{
+class SelectUsers {
 
 	//Блок свойств класса SelectCash
-	//Блок нужен для метода (функции) GetTotalUsers()
-	private $beskutuser;
+	//Блок нужен для метода (функции) GetTotalUser()
+	private $beskuduser;
 	private $mitinouser;
 	private $kolomenuser;
 	private $krylatskoeuser;
@@ -35,6 +35,7 @@ class SelectUsers{
 	private $izmailovouser;
 	private $yasenevouser;
 	private $vodnikuser;
+	private $normaubeskud;
 
 	//Получение текущего колличества водителей на филиале Бескудниково
 	function GetUsersBeskud(){
@@ -42,6 +43,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -53,10 +55,10 @@ class SelectUsers{
 	 
 	   		 	$total_user = pg_num_rows($query);
 
-	   		 	$this->beskutuser = $total_user;
+	   		 	$this->beskuduser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-beskud{background:red;}</style>';
+	   		 		echo '<style>.user-red-beskud{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -81,6 +83,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -95,7 +98,7 @@ class SelectUsers{
 	   		 	$this->mitinouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-mitino{background:red;}</style>';
+	   		 		echo '<style>.user-red-mitino{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -120,6 +123,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -134,7 +138,7 @@ class SelectUsers{
 	   		 	$this->kolomenuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-kolomen{background:red;}</style>';
+	   		 		echo '<style>.user-red-kolomen{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -159,6 +163,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -173,7 +178,7 @@ class SelectUsers{
 	   		 	$this->кrylatskoeuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-kolomen{background:red;}</style>';
+	   		 		echo '<style>.user-red-kolomen{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -198,6 +203,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -212,7 +218,7 @@ class SelectUsers{
 	   		 	$this->sviblovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-sviblovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-sviblovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -237,6 +243,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -251,7 +258,7 @@ class SelectUsers{
 	   		 	$this->stroginouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-strogino{background:red;}</style>';
+	   		 		echo '<style>.user-red-strogino{background:#f2dede;}</style>';
 	   		 		$total_user;	
 	   		 	}
 	   		 	else{
@@ -276,6 +283,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -290,7 +298,7 @@ class SelectUsers{
 	   		 	$this->kantimuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-kantim{background:red;}</style>';
+	   		 		echo '<style>.user-red-kantim{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -315,6 +323,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -329,7 +338,7 @@ class SelectUsers{
 	   		 	$this->domodedovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-domodedovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-domodedovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -354,6 +363,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -368,7 +378,7 @@ class SelectUsers{
 	   		 	$this->dubrovkauser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-dubrovka{background:red;}</style>';
+	   		 		echo '<style>.user-red-dubrovka{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -393,6 +403,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -407,7 +418,7 @@ class SelectUsers{
 	   		 	$this->pionerkauser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-pionerka{background:red;}</style>';
+	   		 		echo '<style>.user-red-pionerka{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -432,6 +443,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -446,7 +458,7 @@ class SelectUsers{
 	   		 	$this->luberuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-luber{background:red;}</style>';
+	   		 		echo '<style>.user-red-luber{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -471,6 +483,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -485,7 +498,7 @@ class SelectUsers{
 	   		 	$this->bibirevouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-bibirevo{background:red;}</style>';
+	   		 		echo '<style>.user-red-bibirevo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -510,6 +523,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -524,7 +538,7 @@ class SelectUsers{
 	   		 	$this->marinouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-marino{background:red;}</style>';
+	   		 		echo '<style>.user-red-marino{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -549,6 +563,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -563,7 +578,7 @@ class SelectUsers{
 	   		 	$this->perovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-perovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-perovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -588,6 +603,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -602,7 +618,7 @@ class SelectUsers{
 	   		 	$this->chertanovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-chertanovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-chertanovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -627,6 +643,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -641,7 +658,7 @@ class SelectUsers{
 	   		 	$this->butovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-butovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-butovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -666,6 +683,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -680,7 +698,7 @@ class SelectUsers{
 	   		 	$this->akademuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-akadem{background:red;}</style>';
+	   		 		echo '<style>.user-red-akadem{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -705,6 +723,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -719,7 +738,7 @@ class SelectUsers{
 	   		 	$this->ordjenuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-ordjen{background:red;}</style>';
+	   		 		echo '<style>.user-red-ordjen{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -744,6 +763,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -758,7 +778,7 @@ class SelectUsers{
 	   		 	$this->dinamouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-dinamo{background:red;}</style>';
+	   		 		echo '<style>.user-red-dinamo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -783,6 +803,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -797,7 +818,7 @@ class SelectUsers{
 	   		 	$this->izmailovouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-izmailovo{background:red;}</style>';
+	   		 		echo '<style>.user-red-izmailovo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -822,6 +843,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -836,7 +858,7 @@ class SelectUsers{
 	   		 	$this->yasenevouser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-yasenevo{background:red;}</style>';
+	   		 		echo '<style>.user-red-yasenevo{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -861,6 +883,7 @@ class SelectUsers{
 
 		if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
 			echo "Сервер не доступен!";
+			pg_close($connect_db);
 			
 		}
 		else{
@@ -875,7 +898,7 @@ class SelectUsers{
 	   		 	$this->vodnikuser = $total_user;
 
 	   		 	if($total_user == "1"){
-	   		 		echo '<style>.user-red-vodnik{background:red;}</style>';
+	   		 		echo '<style>.user-red-vodnik{background:#f2dede;}</style>';
 	   		 		echo $total_user;	
 	   		 	}
 	   		 	else{
@@ -896,9 +919,7 @@ class SelectUsers{
 
 	//Функция подсчета колличества водителей по всем филиалам
 	function GetTotalUsers(){
-		echo $this->beskutuser + $this->mitinouser + $this->kolomenuser + $this->кrylatskoeuser + $this->sviblovouser + $this->stroginouser + $this->kantimuser + $this->domodedovouser + $this->dubrovkauser + $this->pionerkauser + $this->luberuser + $this->bibirevouser + $this->marinouser + $this->perovouser + $this->chertanovouser + $this->butovouser + $this->akademuser + $this->ordjenuser + $this->dinamouser + $this->izmailovouser + $this->yasenevouser + $this->vodnikuser;
+		echo $this->beskuduser + $this->mitinouser + $this->kolomenuser + $this->krylatskoeuser + $this->sviblovouser + $this->stroginouser + $this->kantimuser + $this->domodedovouser + $this->dubrovkauser + $this->pionerkauser + $this->luberuser + $this->bibirevouser + $this->marinouser + $this->perovouser + $this->chertanovouser + $this->butovouser + $this->akademuser + $this->ordjenuser + $this->dinamouser + $this->izmailovouser + $this->yasenevouser + $this->vodnikuser;
 	}
 
 }
-
-?>
