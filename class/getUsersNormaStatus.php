@@ -34,7 +34,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -49,12 +49,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaBeskudAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-beskud{background:#f2dede;}</style>";
@@ -129,7 +129,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "2", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -144,12 +144,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaMitinoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-mitino{background:#f2dede;}</style>";
@@ -224,7 +224,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -239,12 +239,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaKolomenAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-kolomen{background:#f2dede;}</style>";
@@ -319,7 +319,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -334,12 +334,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaKrylatskoeAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-krylatskoe{background:#f2dede;}</style>";
@@ -414,7 +414,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -429,12 +429,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaSviblovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-sviblovo{background:#f2dede;}</style>";
@@ -509,7 +509,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -524,12 +524,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaStroginoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-strogino{background:#f2dede;}</style>";
@@ -604,7 +604,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "2", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -619,12 +619,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaKantimAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-kantim{background:#f2dede;}</style>";
@@ -699,7 +699,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -714,12 +714,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaDomodedovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-domodedovo{background:#f2dede;}</style>";
@@ -794,7 +794,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "4", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -809,12 +809,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "4", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "4", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaDubrovkaAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-dubrovka{background:#f2dede;}</style>";
@@ -889,7 +889,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "4", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "5", "6" => "4"];
 
 					return strtr($weekday, $data);
 				}
@@ -904,12 +904,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "5", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "5", "6" => "6",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaPionerkaAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-pionerka{background:#f2dede;}</style>";
@@ -984,7 +984,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "2", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -999,12 +999,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaLuberAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-luber{background:#f2dede;}</style>";
@@ -1079,7 +1079,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1094,12 +1094,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "4", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaBibirevoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-bibirevo{background:#f2dede;}</style>";
@@ -1174,7 +1174,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "2", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -1189,12 +1189,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaMarinoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-marino{background:#f2dede;}</style>";
@@ -1269,7 +1269,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1284,12 +1284,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaPerovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-perovo{background:#f2dede;}</style>";
@@ -1364,7 +1364,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1379,12 +1379,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "4", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaChertanovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-chertanovo{background:#f2dede;}</style>";
@@ -1459,7 +1459,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -1474,12 +1474,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaButovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-butovo{background:#f2dede;}</style>";
@@ -1554,7 +1554,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1569,12 +1569,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaAkademAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-akadem{background:#f2dede;}</style>";
@@ -1649,7 +1649,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "5", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1664,12 +1664,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "4", "1" => "4", "2" => "4", "3" => "4", "4" => "4", "5" => "4", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaOrdjenAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-ordjen{background:#f2dede;}</style>";
@@ -1744,7 +1744,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "2"];
 
 					return strtr($weekday, $data);
 				}
@@ -1759,12 +1759,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaDinamoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-dinamo{background:#f2dede;}</style>";
@@ -1839,7 +1839,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "2", "1" => "2", "2" => "2", "3" => "2", "4" => "2", "5" => "2", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -1854,12 +1854,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaIzmailovoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-izmailovo{background:#f2dede;}</style>";
@@ -1949,12 +1949,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "4", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "4", "4" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaYasenevoAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-yasenevo{background:#f2dede;}</style>";
@@ -2029,7 +2029,7 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "1", "1" => "1", "2" => "2", "3" => "2", "4" => "3", "5" => "4", "6" => "3"];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "3"];
 
 					return strtr($weekday, $data);
 				}
@@ -2044,12 +2044,12 @@ class GetUsersNormaStatus {
 					//4 - Четверг
 					//5 - Пятница
 					//6 - Суббота
-					$data = ["0" => "3", "1" => "4", "2" => "3", "3" => "2", "4" => "2", "5" => "1", "6" => "1",];
+					$data = ["0" => "3", "1" => "3", "2" => "3", "3" => "3", "4" => "3", "5" => "3", "6" => "4",];
 
 					return strtr($weekday, $data);
 				}
 
-				if($time <= "12:00:00") {
+				if($time <= "18:00:00") {
 					$weekday = NormaVodnikAM($weekday);
 					if($weekday > $total_user) {
 						echo "<style>.user-norma-red-vodnik{background:#f2dede;}</style>";

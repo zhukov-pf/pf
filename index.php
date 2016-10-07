@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta lang="ru">
@@ -7,27 +7,34 @@
 	<!-- Строка <meta http-equiv="Refresh" content="3600"> нужна для автоматического обнавления страницы. Значение content указывается в секундах. -->
 	<meta http-equiv="Refresh" content="3600">
 	<title>Статистика по филиалам</title>
+	<link rel="icon" href="/test/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/test/favicon.ico" type="image/x-icon">
+
 	<!-- Bootstrap 3 -->
-	<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/test/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/test/js/bootstrap/js/bootstrap.min.js" rel="stylesheet">
 </head>
 <body>
 
 		<?php
 		define("START_TIME", microtime(true));
 
-		error_reporting(0);
+		//error_reporting(0);
 
 		//Подключаем файл класса, отвечающий за проверку статуса соединения с сервером филиала
-		include ("/class/getStatus.php");
+		include ($_SERVER['DOCUMENT_ROOT']."/test/class/getStatus.php");
 
 		//Подключаем файл класса, отвечающий за ввывод выручки по филиалам
-		include ("/class/selectCash.php");
+		include ($_SERVER['DOCUMENT_ROOT']."/test/class/selectCash.php");
 
 		//Подключаем файл класса, отвечающий за ввывод колличества водителей на филиалах
-		include ("/class/selectUsers.php");
+		include ($_SERVER['DOCUMENT_ROOT']."/test/class/selectUsers.php");
+
+		//подключаем файл класса, отвечающий за сверку нормы и количества водителей на филиале
+		include ($_SERVER['DOCUMENT_ROOT']."/test/class/getUsersNormaStatus.php");
 
 		//Подключаем файл класса, отвечающий за ввывод колличества заказов на филиалах
-		include ("/class/selectOrders.php");
+		include ($_SERVER['DOCUMENT_ROOT']."/test/class/selectOrders.php");
 
 		//Присваиваем переменной новый (-ую) объект (копию класса) getStatus
 		$status = new getStatus;
@@ -37,6 +44,9 @@
 
 		//Присваиваем переменной новый (-ую) объект (копию класса) selectUsers
 		$user = new selectUsers;
+
+		//Присваиваем переменной новый (-ую) объект (копию класса) getUsersNormaStatus
+		$usernorma = new getUsersNormaStatus;
 
 		//Присваиваем переменной новый (-ую) объект (копию класса) selectOrders
 		$orders = new selectOrders;
@@ -81,7 +91,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-akadem user-norma-green-akadem"><?php $user->NormaUserAkadem(); ?></td>
+						<td width="50%" class="user-norma-red-akadem user-norma-green-akadem user-norma-orange-akadem"><?php $usernorma->NormaUserAkadem(); ?></td>
 						<td width="50%" class="user-red-akadem"><?php $user->GetUsersAkadem() ?></td>
 					</tr>
 				</table>
@@ -102,7 +112,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-beskud user-norma-green-beskud"><?php $user->NormaUserBeskud() ?></td>
+						<td width="50%" class="user-norma-red-beskud user-norma-orange-beskud user-norma-green-beskud"><?php $usernorma->NormaUserBeskud() ?></td>
 						<td width="50%" class="user-red-beckud"><?php $user->GetUsersBeskud() ?></td>
 					</tr>
 				</table>
@@ -123,7 +133,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-bibirevo user-norma-green-bibirevo"><?php $user->NormaUserBibirevo() ?></td>
+						<td width="50%" class="user-norma-red-bibirevo user-norma-green-bibirevo user-norma-orange-bibirevo"><?php $usernorma->NormaUserBibirevo() ?></td>
 						<td width="50%" class="user-red-bibirevo"><?php $user->GetUsersBibirevo() ?></td>
 					</tr>
 				</table>
@@ -144,7 +154,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-butovo user-norma-green-butovo"><?php $user->NormaUserButovo(); ?></td>
+						<td width="50%" class="user-norma-red-butovo user-norma-green-butovo user-norma-orange-butovo"><?php $usernorma->NormaUserButovo(); ?></td>
 						<td width="50%" class="user-red-butovo"><?php $user->GetUsersButovo() ?></td>
 					</tr>
 				</table>
@@ -165,7 +175,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-vodnik user-norma-green-vodnik"><?php $user->NormaUserVodnik(); ?></td>
+						<td width="50%" class="user-norma-red-vodnik user-norma-green-vodnik user-norma-orange-vodnik"><?php $usernorma->NormaUserVodnik(); ?></td>
 						<td width="50%" class="user-red-vodnik"><?php $user->GetUsersVodnik() ?></td>
 					</tr>
 				</table>
@@ -186,7 +196,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-dinamo user-norma-green-dinamo"><?php $user->NormaUserDinamo(); ?></td>
+						<td width="50%" class="user-norma-red-dinamo user-norma-green-dinamo user-norma-orange-dinamo"><?php $usernorma->NormaUserDinamo(); ?></td>
 						<td width="50%" class="user-red-dinamo"><?php $user->GetUsersDinamo() ?></td>
 					</tr>
 				</table>
@@ -207,7 +217,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-domodedovo user-norma-green-domodedovo"><?php $user->NormaUserDomodedovo() ?></td>
+						<td width="50%" class="user-norma-red-domodedovo user-norma-green-domodedovo user-norma-orange-domodedovo"><?php $usernorma->NormaUserDomodedovo() ?></td>
 						<td width="50%" class="user-red-akadem"><?php $user->GetUsersDomodedovo() ?></td>
 					</tr>
 				</table>
@@ -228,7 +238,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-dubrovka user-norma-green-dubrovka"><?php $user->NormaUserDubrovka() ?></td>
+						<td width="50%" class="user-norma-red-dubrovka user-norma-green-dubrovka user-norma-orange-dubrovka"><?php $usernorma->NormaUserDubrovka() ?></td>
 						<td width="50%" class="user-red-dubrovka"><?php $user->GetUsersDubrovka() ?></td>
 					</tr>
 				</table>
@@ -249,7 +259,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-izmailovo user-norma-green-izmailovo"><?php $user->NormaUserIzmailovo(); ?></td>
+						<td width="50%" class="user-norma-red-izmailovo user-norma-green-izmailovo user-norma-orange-izmailovo"><?php $usernorma->NormaUserIzmailovo(); ?></td>
 						<td width="50%" class="user-red-izmailovo"><?php $user->GetUsersIzmailovo() ?></td>
 					</tr>
 				</table>
@@ -270,7 +280,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-kantim user-norma-green-kantim"><?php $user->NormaUserKantim() ?></td>
+						<td width="50%" class="user-norma-red-kantim user-norma-green-kantim user-norma-orange-kantim"><?php $usernorma->NormaUserKantim() ?></td>
 						<td width="50%" class="user-red-kantim"><?php $user->GetUsersKantim() ?></td>
 					</tr>
 				</table>
@@ -291,7 +301,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-kolomen user-norma-green-kolomen"><?php $user->NormaUserKolomen() ?></td>
+						<td width="50%" class="user-norma-red-kolomen user-norma-green-kolomen user-norma-orange-kolomen"><?php $usernorma->NormaUserKolomen() ?></td>
 						<td width="50%" class="user-red-kolomen"><?php $user->GetUsersKolomen() ?></td>
 					</tr>
 				</table>
@@ -312,7 +322,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-krylatskoe user-norma-green-krylatskoe"><?php $user->NormaUserKrylatskoe() ?></td>
+						<td width="50%" class="user-norma-red-krylatskoe user-norma-green-krylatskoe user-norma-orange-krylatskoe"><?php $usernorma->NormaUserKrylatskoe() ?></td>
 						<td width="50%" class="user-red-kolomen"><?php $user->GetUsersKrylatskoe() ?></td>
 					</tr>
 				</table>
@@ -333,7 +343,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-luber user-norma-green-luber"><?php $user->NormaUserLuber() ?></td>
+						<td width="50%" class="user-norma-red-luber user-norma-green-luber user-norma-orange-luber"><?php $usernorma->NormaUserLuber() ?></td>
 						<td width="50%" class="user-red-luber"><?php $user->GetUsersLuber() ?></td>
 					</tr>
 				</table>
@@ -354,7 +364,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-marino user-norma-green-marino"><?php $user->NormaUserMarino() ?></td>
+						<td width="50%" class="user-norma-red-marino user-norma-green-marino user-norma-orange-marino"><?php $usernorma->NormaUserMarino() ?></td>
 						<td width="50%" class="user-red-marino"><?php $user->GetUsersMarino() ?></td>
 					</tr>
 				</table>
@@ -375,7 +385,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-mitino user-norma-green-mitino"><?php $user->NormaUserMitino() ?></td>
+						<td width="50%" class="user-norma-red-mitino user-norma-green-mitino user-norma-orange-mitino"><?php $usernorma->NormaUserMitino() ?></td>
 						<td width="50%" class="user-red-mitino"><?php $user->GetUsersMitino() ?></td>
 					</tr>
 				</table>
@@ -396,7 +406,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-ordjen user-norma-green-ordjen"><?php $user->NormaUserOrdjen(); ?></td>
+						<td width="50%" class="user-norma-red-ordjen user-norma-green-ordjen user-norma-orange-ordjen"><?php $usernorma->NormaUserOrdjen(); ?></td>
 						<td width="50%" class="user-red-ordjen"><?php $user->GetUsersOrdjen() ?></td>
 					</tr>
 				</table>
@@ -417,7 +427,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-perovo user-norma-green-perovo"><?php $user->NormaUserPerovo() ?></td>
+						<td width="50%" class="user-norma-red-perovo user-norma-green-perovo user-norma-orange-perovo"><?php $usernorma->NormaUserPerovo() ?></td>
 						<td width="50%" class="user-red-perovo"><?php $user->GetUsersPerovo() ?></td>
 					</tr>
 				</table>
@@ -438,7 +448,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-pionerka user-norma-green-pionerka"><?php $user->NormaUserPionerka() ?></td>
+						<td width="50%" class="user-norma-red-pionerka user-norma-green-pionerka user-norma-orange-pionerka"><?php $usernorma->NormaUserPionerka() ?></td>
 						<td width="50%" class="user-red-pionerka"><?php $user->GetUsersPionerka() ?></td>
 					</tr>
 				</table>
@@ -459,7 +469,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-sviblovo user-norma-green-sviblovo"><?php $user->NormaUserSviblovo(); ?></td>
+						<td width="50%" class="user-norma-red-sviblovo user-norma-green-sviblovo user-norma-orange-sviblovo"><?php $usernorma->NormaUserSviblovo(); ?></td>
 						<td width="50%" class="user-red-sviblovo"><?php $user->GetUsersSviblovo(); ?></td>
 					</tr>
 				</table>
@@ -480,7 +490,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-strogino user-norma-green-strogino"><?php $user->NormaUserStrogino(); ?></td>
+						<td width="50%" class="user-norma-red-strogino user-norma-green-strogino user-norma-orange-strogino"><?php $usernorma->NormaUserStrogino(); ?></td>
 						<td width="50%" class="user-red-strogino"><?php $user->GetUsersStrogino() ?></td>
 					</tr>
 				</table>
@@ -501,7 +511,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-chertanovo user-norma-green-chertanovo"><?php $user->NormaUserChertanovo(); ?></td>
+						<td width="50%" class="user-norma-red-chertanovo user-norma-green-chertanovo user-norma-orange-chertanovo"><?php $usernorma->NormaUserChertanovo(); ?></td>
 						<td width="50%" class="user-red-chertanovo"><?php $user->GetUsersChertanovo() ?></td>
 					</tr>
 				</table>
@@ -522,7 +532,7 @@
 			<td colspan="2">
 				<table width="100%">
 					<tr align="center">
-						<td width="50%" class="user-norma-red-yasenevo user-norma-green-yasenevo"><?php $user->NormaUserYasenevo(); ?></td>
+						<td width="50%" class="user-norma-red-yasenevo user-norma-green-yasenevo user-norma-orange-yasenevo"><?php $usernorma->NormaUserYasenevo(); ?></td>
 						<td width="50%" class="user-red-yasenevo"><?php $user->GetUsersYasenevo() ?></td>
 					</tr>
 				</table>
@@ -554,7 +564,7 @@
 	<table class="table table-responsive">
 		<tr>
 			<td align="right"><?php printf("Отчет сгенерирован за: %.5f сек", microtime(true)-START_TIME);?></td>
-			<td align="right" style="display: none;">Обнавлено в <?php echo date ("d-m-Y H:i:s.", filemtime("index.php"));?></td>
+			<td align="right""></td>
 			<td></td>
 		</tr>
 	</table>

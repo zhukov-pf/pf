@@ -44,7 +44,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Бескудниково
 	function GetTotalCashBeskud(){
-		$connect_db = pg_connect("host=172.18.1.4 port=5432 dbname=pizza_site6 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.1.4 port=5432 dbname=pizza_site6 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -89,7 +89,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Митино
 	function GetTotalCashMitino(){
-		$connect_db = pg_connect("host=172.18.2.254 port=5432 dbname=pizza_site2 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.2.254 port=5432 dbname=pizza_site2 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -130,7 +130,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Коломенское
 	function GetTotalCashKolomen(){
-		$connect_db = pg_connect("host=172.18.3.254 port=5432 dbname=pizza_site3 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.3.254 port=5432 dbname=pizza_site3 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -171,7 +171,7 @@ class SelectCash{
 
   //Получение текущей выручки на филиале Крылатское
   function GetTotalCashKrylatskoe(){
-    $connect_db = pg_connect("host=172.18.4.254 port=5432 dbname=pizza_site4 user=pizzauser password=pizzauser");
+    $connect_db = pg_connect("host=172.18.4.254 port=5432 dbname=pizza_site4 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -212,7 +212,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Свиблово
 	function GetTotalCashSviblovo(){
-		$connect_db = pg_connect("host=172.18.6.254 port=5432 dbname=pizza_site11 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.6.254 port=5432 dbname=pizza_site11 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -253,7 +253,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Строгино
 	function GetTotalCashStrogino(){
-		$connect_db = pg_connect("host=172.18.7.254 port=5432 dbname=pizza_site7 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.7.254 port=5432 dbname=pizza_site7 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -294,7 +294,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Кантемировская
 	function GetTotalCashKantim(){
-		$connect_db = pg_connect("host=172.18.8.254 port=5432 dbname=pizza_site8 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.8.254 port=5432 dbname=pizza_site8 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -335,7 +335,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Домодедовская
 	function GetTotalCashDomodedovo(){
-		$connect_db = pg_connect("host=172.18.9.254 port=5432 dbname=pizza_site9 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.9.254 port=5432 dbname=pizza_site9 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -376,7 +376,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Дубровка
 	function GetTotalCashDubrovka(){
-		$connect_db = pg_connect("host=172.18.10.254 port=5432 dbname=pizza_site10 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.10.254 port=5432 dbname=pizza_site10 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -417,7 +417,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Пионерская
 	function GetTotalCashPionerka(){
-		$connect_db = pg_connect("host=172.18.11.254 port=5432 dbname=pizza_site1 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.11.254 port=5432 dbname=pizza_site1 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -458,7 +458,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Люберцы
 	function GetTotalCashLuber(){
-		$connect_db = pg_connect("host=172.18.12.3 port=5432 dbname=pizza_site12 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.12.3 port=5432 dbname=pizza_site12 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -499,7 +499,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Бибирево
 	function GetTotalCashBibirevo(){
-		$connect_db = pg_connect("host=172.18.13.254 port=5432 dbname=pizza_site13 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.13.254 port=5432 dbname=pizza_site13 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -540,7 +540,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Марьино
 	function GetTotalCashMarino(){
-		$connect_db = pg_connect("host=172.18.14.254 port=5432 dbname=pizza_site14 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.14.254 port=5432 dbname=pizza_site14 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -581,7 +581,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Перово
 	function GetTotalCashPerovo(){
-		$connect_db = pg_connect("host=172.18.15.254 port=5432 dbname=pizza_site15 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.15.254 port=5432 dbname=pizza_site15 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -622,7 +622,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Чертаново
 	function GetTotalCashChertanovo(){
-		$connect_db = pg_connect("host=172.18.16.254 port=5432 dbname=pizza_site16 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.16.254 port=5432 dbname=pizza_site16 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -663,7 +663,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Бутово
 	function GetTotalCashButovo(){
-		$connect_db = pg_connect("host=172.18.17.254 port=5432 dbname=pizza_site17 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.17.254 port=5432 dbname=pizza_site17 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -704,7 +704,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Академическая
 	function GetTotalCashAkadem(){
-		$connect_db = pg_connect("host=172.18.18.4 port=5432 dbname=pizza_site18 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.18.4 port=5432 dbname=pizza_site18 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -745,7 +745,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Ордженикидзе
 	function GetTotalCashOrdjen(){
-		$connect_db = pg_connect("host=172.18.19.254 port=5432 dbname=pizza_site19 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.19.254 port=5432 dbname=pizza_site19 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -786,7 +786,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Динамо
 	function GetTotalCashDinamo(){
-		$connect_db = pg_connect("host=172.18.20.254 port=5432 dbname=pizza_site20 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.20.254 port=5432 dbname=pizza_site20 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -827,7 +827,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Измайлово
 	function GetTotalCashIzmailovo(){
-		$connect_db = pg_connect("host=172.18.21.254 port=5432 dbname=pizza_site21 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.21.254 port=5432 dbname=pizza_site21 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -868,7 +868,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Ясенево
 	function GetTotalCashYasenevo(){
-		$connect_db = pg_connect("host=172.18.22.254 port=5432 dbname=pizza_site22 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.22.254 port=5432 dbname=pizza_site22 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
@@ -908,7 +908,7 @@ class SelectCash{
 
 	//Получение текущей выручки на филиале Водный Стадион
 	function GetTotalCashVodnik(){
-		$connect_db = pg_connect("host=172.18.24.254 port=5432 dbname=pizza_site24 user=pizzauser password=pizzauser");
+		$connect_db = pg_connect("host=172.18.24.254 port=5432 dbname=pizza_site24 user=pizzauser password=pizzauser connect_timeout=5");
 
     if(pg_connection_status($connect_db) !== PGSQL_CONNECTION_OK){
       echo "Сервер не доступен!";
